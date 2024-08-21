@@ -10,6 +10,9 @@ public class HomePage extends BasePage{
     private WebElement menuBtn;
     @FindBy( id = "logout_sidebar_link")
     private WebElement logoutBtn;
+    @FindBy(id = "inventory_container")
+    private WebElement productsListContainer;
+
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -21,6 +24,10 @@ public class HomePage extends BasePage{
 
     public void logout() {
         logoutBtn.click();
+    }
+
+    public boolean checkProductList() {
+        return productsListContainer.isDisplayed();
     }
 
 }

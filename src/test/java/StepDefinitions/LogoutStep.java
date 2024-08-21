@@ -12,15 +12,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LogoutStep {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private BaseTest baseTest = new BaseTest();
+    private WebDriver driver = baseTest.getDriver();
     private LoginPage loginPage;
-    public HomePage homePage;
+    private HomePage homePage;
+
+
 
     @Given("user enters {string} username and {string} password")
     public void user_enters_username_and_password(String username, String password) {
+        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage(driver);
         loginPage.userEntersUsername(username);
         loginPage.userEntersPassword(password);
+        homePage = new HomePage(driver);
     }
 
     @When("user clicks on the logout button")
