@@ -27,6 +27,7 @@ public class LogoutStep {
     public void user_clicks_on_the_logout_button() {
         homePage.openMenu();
         homePage.logout();
+
     }
 
     @Then("user is on the {string} page")
