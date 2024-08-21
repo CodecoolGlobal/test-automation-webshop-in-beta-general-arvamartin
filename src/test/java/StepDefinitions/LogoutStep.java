@@ -30,7 +30,7 @@ public class LogoutStep {
 
     }
 
-    @Then("user is on the {string} page")
+    @Then("user is on desired the {string} page")
     public void user_is_on_the_page(String page) {
         assertEquals(page,driver.getCurrentUrl());
     }
