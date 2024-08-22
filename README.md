@@ -1,4 +1,5 @@
 # Webshop in Beta (Selenium Grid Project)
+<img src="img.png" alt="img.png" width="700"/>;
 ## Overview
 This project leverages Selenium Grid to perform automated UI testing on a webshop application (https://www.saucedemo.com/), using various browsers. 
 The testing framework is set up using Selenium, Cucumber for behavior-driven development (BDD), and Maven for project management.
@@ -46,14 +47,17 @@ docker compose -f docker-compose-v3.yml up
 ```bash
 docker compose -f docker-compose-v3.yml down
 ```
+* The results of the tests can be checked in detail on this website: [http://localhost:4444/](http://localhost:4444/).
+<img src="img_1.png" alt="img_1.png" width="700"/>;
 
 ## Bug report
 * The project currently has the following known issues:
   - **Form Validation Bypass on Checkout Page**
     - Description: When attempting to proceed with checkout on the webshop, users are required to fill out a form with their first name, last name, and postal code. However, the system allows users to proceed to the next step even if invalid information is entered into these fields.
+    - In addition, the form does not require additional information (e.g. billing address, residential address or delivery address...etc) 
   - **Registration Functionality Not Available**
     - Description: Users are unable to register an account on the webshop, as the registration option is not available or visible on the website. This prevents new users from creating accounts and accessing features that require registration.
 * These issues are listed in the project's task board in the "TO DO" column and are awaiting resolution.
 
 ## Test Details
-For detailed information on each test scenario, refer to the feature files under `src/test/resources/features`.
+* For detailed information on each test scenario, refer to the feature files under `src/test/resources/features`.
