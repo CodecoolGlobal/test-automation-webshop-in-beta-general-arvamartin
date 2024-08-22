@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends BasePage{
 
@@ -14,17 +15,19 @@ public class HomePage extends BasePage{
     private WebElement productsListContainer;
 
 
+
     public HomePage(WebDriver driver) {
         super(driver);
     }
 
     public void openMenu() {
-        menuBtn.click();
+        wait(menuBtn).click();
     }
 
     public void logout() {
-        logoutBtn.click();
+        wait(logoutBtn).click();
     }
+
 
     public boolean checkProductList() {
         return productsListContainer.isDisplayed();

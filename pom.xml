@@ -46,12 +46,12 @@
             <artifactId>postgresql</artifactId>
             <version>42.7.2</version>
         </dependency>
-
-        <!-- WebDriver Manager -->
+        
         <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.5.0</version>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>13.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

@@ -6,6 +6,7 @@ Feature: User can logout
     Given user is using "<browser>" browser
     And user is on the "https://www.saucedemo.com/" page
     And user enters "standard_user" username and "secret_sauce" password
+    And user clicks on the login button
     When user clicks on the logout button
     Then user is on desired the "https://www.saucedemo.com/" page
     Examples:

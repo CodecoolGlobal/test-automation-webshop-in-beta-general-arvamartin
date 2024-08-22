@@ -5,7 +5,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.LoginPage;
 
 import java.net.MalformedURLException;
@@ -13,10 +12,9 @@ import java.net.URL;
 
 public class BaseTest {
 
-    private WebDriver driver;
-    private LoginPage loginPage;
+    private static WebDriver driver;
 
-    public void setUpDriver(String browser) throws MalformedURLException {
+    public static void setUpDriver(String browser) throws MalformedURLException {
         String remoteWebDriverUrl = "http://localhost:4444/wd/hub";
         switch (browser.toLowerCase()) {
             case "edge":
@@ -31,10 +29,9 @@ public class BaseTest {
             default:
                 throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
-        loginPage = new LoginPage(driver);
     }
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
         return driver;
     }
 }

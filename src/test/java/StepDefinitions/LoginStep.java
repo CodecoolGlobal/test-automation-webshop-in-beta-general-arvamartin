@@ -4,14 +4,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import pages.HomePage;
 import pages.LoginPage;
 import java.net.MalformedURLException;
-import java.net.URL;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,13 +14,12 @@ public class LoginStep {
 
     private WebDriver driver;
     private LoginPage loginPage;
-    private BaseTest baseTest;
+
 
     @Given("user is using {string} browser")
     public void userIsUsing(String browser) throws MalformedURLException {
-       baseTest = new BaseTest();
-       baseTest.setUpDriver(browser);
-       driver = baseTest.getDriver();
+       BaseTest.setUpDriver(browser);
+       driver = BaseTest.getDriver();
        loginPage = new LoginPage(driver);
     }
 

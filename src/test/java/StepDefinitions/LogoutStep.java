@@ -12,8 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LogoutStep {
 
-    private BaseTest baseTest = new BaseTest();
-    private WebDriver driver = baseTest.getDriver();
+    private WebDriver driver = BaseTest.getDriver();
     private LoginPage loginPage;
     private HomePage homePage;
 
