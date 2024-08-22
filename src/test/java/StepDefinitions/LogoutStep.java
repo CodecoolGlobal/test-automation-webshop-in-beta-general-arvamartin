@@ -8,6 +8,7 @@ import pages.HomePage;
 import pages.LoginPage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class LogoutStep {
 
@@ -33,5 +34,10 @@ public class LogoutStep {
     @Then("user is on desired the {string} page")
     public void user_is_on_the_page(String page) {
         assertEquals(page, driver.getCurrentUrl());
+    }
+
+    @Then("user cannot see the menu button")
+    public void user_cannot_see_the_menu_button() {
+        assertFalse(homePage.isMenuBtnDisplayed());
     }
 }
