@@ -25,4 +25,14 @@ public class ProductListingStep {
         assertTrue(homePage.checkProductList());
     }
 
+    @When("user selects the low to high sorting method")
+    public void userSelectsTheLowToHighSortingMethod() {
+        homePage.sortProducts();
+    }
+
+    @Then("user sees products in low to high sorting")
+    public void userSeesProductsInLowToHighSorting() {
+        String selectedSortingText = homePage.getProductsSortBtnText();
+        assertEquals("Price (low to high)", selectedSortingText);
+    }
 }
