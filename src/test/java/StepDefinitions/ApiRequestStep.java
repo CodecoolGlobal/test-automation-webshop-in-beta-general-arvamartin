@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -19,8 +20,8 @@ public class ApiRequestStep {
 
     @Given("user send a GET request to {string}")
     public void userSendGETRequestTo(String url) {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
         driver.get(url);
     }
 
