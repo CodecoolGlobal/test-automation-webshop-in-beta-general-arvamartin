@@ -12,3 +12,17 @@ Feature: The user can read description about a product
       | edge    |
       | chrome  |
       | firefox |
+
+    Scenario Outline: The user can navigate back to the home page
+      Given user is using "<browser>" browser
+      And user is on the "https://www.saucedemo.com/" page
+      And user enters "standard_user" username and "secret_sauce" password
+      And user clicks on the login button
+      When user clicks on the first product
+      And  user clicks on the back to home page
+      Then user is on the desired "https://www.saucedemo.com/inventory.html" page
+      Examples:
+        | browser |
+        | edge    |
+        | chrome  |
+        | firefox |
