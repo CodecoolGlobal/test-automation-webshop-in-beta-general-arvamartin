@@ -25,7 +25,7 @@ Feature: Product Listing
       And user clicks on the login button
       And user is on the "https://www.saucedemo.com/inventory.html" home page
       And user selects the low to high sorting method
-      Then user sees products in low to high sorting
+      Then user sees products in "Price (low to high)" sorting
       Examples:
         | browser |
         | edge    |

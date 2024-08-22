@@ -81,5 +81,8 @@ public class HomePage extends BasePage {
         return Integer.parseInt(shoppingCartLink.getText());
 
     }
+    public void clickOnShoppingCartIcon() {
+        wait(shoppingCartLink).click();
+    }
 
 }

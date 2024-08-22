@@ -30,9 +30,9 @@ public class ProductListingStep {
         homePage.sortProducts();
     }
 
-    @Then("user sees products in low to high sorting")
-    public void userSeesProductsInLowToHighSorting() {
+    @Then("user sees products in {string} sorting")
+    public void userSeesProductsInLowToHighSorting(String expected) {
         String selectedSortingText = homePage.getProductsSortBtnText();
-        assertEquals("Price (low to high)", selectedSortingText);
+        assertEquals(expected, selectedSortingText);
     }
 }
