@@ -6,11 +6,14 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class HomePage extends BasePage{
+import org.openqa.selenium.support.ui.Select;
 
-    @FindBy( id ="react-burger-menu-btn")
+
+public class HomePage extends BasePage {
+
+    @FindBy(id = "react-burger-menu-btn")
     private WebElement menuBtn;
-    @FindBy( id = "logout_sidebar_link")
+    @FindBy(id = "logout_sidebar_link")
     private WebElement logoutBtn;
     @FindBy(id = "inventory_container")
     private WebElement productsListContainer;
@@ -18,7 +21,16 @@ public class HomePage extends BasePage{
     private List<WebElement> productsList;
     @FindBy(xpath = "//*[@id=\"item_4_img_link\"]")
     private WebElement firstProduct;
-
+    @FindBy(className = "product_sort_container")
+    private WebElement productsSortContainer;
+    @FindBy(css = "select.product_sort_container option[value='lohi']")
+    private WebElement lowToHighSort;
+    @FindBy(id = "add-to-cart-sauce-labs-backpack")
+    private WebElement firstProductToAddToCartBtn;
+    @FindBy(id = "add-to-cart-sauce-labs-bike-light")
+    private WebElement secondProductToAddToCartBtn;
+    @FindBy(className = "shopping_cart_link")
+    private WebElement shoppingCartLink;
 
 
     public HomePage(WebDriver driver) {
@@ -42,11 +54,42 @@ public class HomePage extends BasePage{
     }
 
     public int getRandomProduct(int min, int max) {
-        return min + (int)(Math.random() * ((max - min) + 1));
+        return min + (int) (Math.random() * ((max - min) + 1));
     }
 
     public void clickOnFirstProduct() {
         firstProduct.click();
+    }
+
+    public void clickOnProductsSortBtn() {
+        wait(productsSortContainer).click();
+    }
+
+    public void clickOnLowToHighSort() {
+        wait(lowToHighSort).click();
+    }
+
+    public void sortProducts() {
+        clickOnProductsSortBtn();
+        clickOnLowToHighSort();
+    }
+
+    public String getProductsSortBtnText() {
+        Select select = new Select(productsSortContainer);
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public void addFirstChosenProductToCart() {
+        wait(firstProductToAddToCartBtn).click();
+    }
+
+    public void addSecondChosenProductToCart() {
+        wait(secondProductToAddToCartBtn).click();
+    }
+
+    public int getShoppingCartProductsCount() {
+        return Integer.parseInt(shoppingCartLink.getText());
+
     }
 
 }
