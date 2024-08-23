@@ -48,7 +48,7 @@ docker compose -f docker-compose-v3.yml up
 ```bash
 docker compose -f docker-compose-v3.yml down
 ```
-* The tests can be run with `AllTestRunner` class or separately from the `.feature` files, but The number of tests that can be run in parallel with `AllTestRunner` is limited by the number of available nodes in the Selenium Grid.
+* The tests can be run with `AllTestRunner` class or separately from the `.feature` files.
 * The results of the tests can be checked in detail on Selenium grid website: [http://localhost:4444/](http://localhost:4444/).
 <img src="img_1.png" alt="img_1.png" width="700"/>;
 
