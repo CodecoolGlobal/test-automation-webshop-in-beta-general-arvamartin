@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class LogoutStep {
 
-    private WebDriver driver = BaseTest.getDriver();
+    private WebDriver driver = Util.getDriver();
     private LoginPage loginPage;
     private HomePage homePage;
 

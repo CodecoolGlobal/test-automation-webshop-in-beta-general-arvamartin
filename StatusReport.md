@@ -5,40 +5,35 @@ Report Date: August 22, 2024
 Prepared By: CodeCrackers
 
 ## Summary:
-* The Webshop project is currently in the Beta stage and is progressing well. We have 16 test cases and 3 of them failed in the checkout feature. You can read more about this in the readme file. The testes are executed across Firefox, Chrome, and Edge. However, a critical bug has been identified in the Checkout feature, where the form accepts and processes incorrect data, allowing users to complete the checkout process with invalid information. The overall state of the application is stable except for this issue. The lack of a registration feature is still a gap that needs addressing before the product can go live.
+* Total Tests Executed: 52 (edge, chrome, firefox)
+* Passed: 46
+* Failed: 6
+* Skipped: 0
 
-## Achievements/Completed Work:
+### GET api test
+* status: passed
 
-* Executed 18 test cases across Firefox, Chrome, and Edge, with all tests passing except for the Checkout issues.
-* Verified cross-browser compatibility and stability.
+### Login feature
+* status: passed
 
-## In Progress:
+### Logout feature
+* status: passed
 
-Investigating and fixing the bug in the Checkout feature where incorrect data is being accepted.
-Gathering requirements and planning for the development of the registration feature.
+### Product listing feature
+* status: passed
 
-## Next Steps/Planned Work:
+### Product description feature
+* status: passed
 
-* Resolve the Checkout form bug to ensure it validates and processes data correctly.
-* Develop and integrate the registration page/section.
-* Perform testing on the registration feature once it is implemented.
-* Conduct final regression testing to ensure all features work together seamlessly and that the Checkout bug is fixed.
+### Product add to cart feature
+* status: passed
 
-## Issues and Risks:
+### Cart check-out feature
+* status: failed
+* passed: 2
+* failed: 2
+* Error: User can check out with empty cart + invalid credentials 
 
-* Issue: Checkout form accepts incorrect data, allowing users to complete transactions with invalid information.
-  And system currently allows users to proceed directly to the checkout page without adding any items to their cart.
-* Action: Immediate attention required to fix the validation and data processing in the Checkout feature.
-* Risk: The absence of a registration feature and the Checkout bug may delay the go-live date.
-* Action: Prioritize fixing the Checkout issue and developing the registration page to ensure the product can be launched on schedule.
-
-## Timeline/Deadline:
-
-The project timeline is affected by the need to fix the Checkout bug and implement the registration feature. Adjusted timelines will be defined once the fixes are in place.
-
-## Budget Status:
-No budget concerns at this stage.
-
-## Requests/Approvals:
-Approval needed to proceed with the design and development of the registration feature.
-Resources required for bug fixing in the Checkout feature.
+## Total Execution Time: 3min 21sec
+Pass Rate: 88.46%
+Fail Rate: 11.54%

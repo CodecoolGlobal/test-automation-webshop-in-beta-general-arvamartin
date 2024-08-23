@@ -1,6 +1,5 @@
 package StepDefinitions;
 
-import io.cucumber.java.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -10,7 +9,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class BaseTest {
+public class Util {
 
     private static WebDriver driver;
 
@@ -30,13 +29,9 @@ public class BaseTest {
                 throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
     }
-
     public static WebDriver getDriver() {
         return driver;
     }
 
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
+
 }

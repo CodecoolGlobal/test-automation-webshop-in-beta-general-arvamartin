@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class ProductDescriptionStep {
 
-    private WebDriver driver = BaseTest.getDriver();
+    private WebDriver driver = Util.getDriver();
     private HomePage homePage = new HomePage(driver);
     private ProductDescriptionPage productDescriptionPage = new ProductDescriptionPage(driver);
 

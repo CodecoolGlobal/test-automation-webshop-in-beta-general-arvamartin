@@ -20,8 +20,8 @@ public class LoginStep {
 
     @Given("user is using {string} browser")
     public void userIsUsing(String browser) throws MalformedURLException {
-        BaseTest.setUpDriver(browser);
-        driver = BaseTest.getDriver();
+        Util.setUpDriver(browser);
+        driver = Util.getDriver();
         loginPage = new LoginPage(driver);
     }
 

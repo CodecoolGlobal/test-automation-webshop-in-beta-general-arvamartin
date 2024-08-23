@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CheckOutStep {
 
-    private WebDriver driver = BaseTest.getDriver();
+    private WebDriver driver = Util.getDriver();
     private HomePage homePage = new HomePage(driver);
     private YourCartPage yourCartPage = new YourCartPage(driver);
 

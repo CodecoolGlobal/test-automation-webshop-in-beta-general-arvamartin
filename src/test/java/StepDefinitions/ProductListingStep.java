@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ProductListingStep {
 
-    private WebDriver driver = BaseTest.getDriver();
+    private WebDriver driver = Util.getDriver();
     private HomePage homePage = new HomePage(driver);
 
     @When("user is on the {string} home page")
