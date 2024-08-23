@@ -29,6 +29,8 @@ public class HomePage extends BasePage {
     private WebElement secondProductToAddToCartBtn;
     @FindBy(className = "shopping_cart_link")
     private WebElement shoppingCartLink;
+    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div[1]/div[3]/div[2]/div[2]/button")
+    private WebElement removeFromCartBtn;
 
 
     public HomePage(WebDriver driver) {
@@ -91,6 +93,10 @@ public class HomePage extends BasePage {
         } catch (NoSuchElementException e) {
             return false;
         }
+    }
+
+    public void removeFirstProductFromCart() {
+        wait(removeFromCartBtn).click();
     }
 }
 

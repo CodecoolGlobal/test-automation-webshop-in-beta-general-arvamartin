@@ -11,6 +11,7 @@ The testing framework is set up using Selenium, Cucumber for behavior-driven dev
 ## Project Structure
 
 - [Team Members](#team-members)
+- [Technologies](#technologies)
 - [Setup Instructions](#setup-instructions)
 - [Bug report](#bug-report)
 - [Test details](#test-details)
@@ -47,7 +48,8 @@ docker compose -f docker-compose-v3.yml up
 ```bash
 docker compose -f docker-compose-v3.yml down
 ```
-* The results of the tests can be checked in detail on this website: [http://localhost:4444/](http://localhost:4444/).
+* The tests can be run with `AllTestRunner` class or separately from the `.feature` files, but The number of tests that can be run in parallel with `AllTestRunner` is limited by the number of available nodes in the Selenium Grid.
+* The results of the tests can be checked in detail on Selenium grid website: [http://localhost:4444/](http://localhost:4444/).
 <img src="img_1.png" alt="img_1.png" width="700"/>;
 
 ## Bug report

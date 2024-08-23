@@ -9,7 +9,24 @@ Feature: add products to cart
     And user clicks on the login button
     And user clicks on add to cart button for a product
     And user clicks on add to cart button for another product
-    Then user sees two products on the shopping cart icon
+    Then user sees 2 product on the shopping cart icon
+    Examples:
+      | browser |
+      | edge    |
+      | chrome  |
+      | firefox |
+
+  Scenario Outline: Added products can be removed from the cart
+    Given user is using "<browser>" browser
+    And user is on the "https://www.saucedemo.com/" page
+    When user enters "standard_user" username
+    And user enters "secret_sauce" password
+    And user clicks on the login button
+    And user clicks on add to cart button for a product
+    And user clicks on add to cart button for another product
+    And user clicks on the shopping cart icon
+    And user click on the remove button for the first added product
+    Then user sees 1 product on the shopping cart icon
     Examples:
       | browser |
       | edge    |

@@ -18,14 +18,19 @@ public class AddToCartStep {
         homePage.addFirstChosenProductToCart();
     }
 
-    @And("user clicks on add to cart button for another product")
+    @When("user clicks on add to cart button for another product")
     public void userClicksOnAddToCartButtonForAnotherProduct() {
         homePage.addSecondChosenProductToCart();
     }
 
-    @Then("user sees two products on the shopping cart icon")
-    public void userSeesTwoProductsOnTheShoppingCartIcon() {
-        int expectedNumberOfProducts = 2;
-        assertEquals(expectedNumberOfProducts, homePage.getShoppingCartProductsCount());
+    @When("user click on the remove button for the first added product")
+    public void userClickOnTheRemoveButtonForTheFirstAddedProduct() {
+        homePage.removeFirstProductFromCart();
     }
+
+    @Then("user sees {int} product on the shopping cart icon")
+    public void userSeesTwoProductsOnTheShoppingCartIcon(int numOfProducts) {
+        assertEquals(numOfProducts, homePage.getShoppingCartProductsCount());
+    }
+
 }
