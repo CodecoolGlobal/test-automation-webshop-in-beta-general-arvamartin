@@ -32,3 +32,19 @@ Feature: add products to cart
       | edge    |
       | chrome  |
       | firefox |
+
+    Scenario Outline: The user can add products to the cart on the product description page
+      Given user is using "<browser>" browser
+      And user is on the "https://www.saucedemo.com/" page
+      And user enters "standard_user" username
+      And user enters "secret_sauce" password
+      And user clicks on the login button
+      And user clicks on the first product
+      When user add product to the cart
+      And navigate back to the home page
+      Then user sees 1 product on the shopping cart icon
+      Examples:
+        | browser |
+        | edge    |
+        | chrome  |
+        | firefox |
