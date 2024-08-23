@@ -2,17 +2,15 @@ package StepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class ApiRequestStep {
 
@@ -25,7 +23,6 @@ public class ApiRequestStep {
         driver.get(url);
     }
 
-
     @Then("the response status code should be {int}")
     public void theResponseStatusCodeShouldBe(int expectedStatusCode) throws IOException {
 
@@ -33,11 +30,8 @@ public class ApiRequestStep {
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         int actualStatusCode = connection.getResponseCode();
-
-        assertTrue("Unexpected status code: " + actualStatusCode, actualStatusCode == expectedStatusCode);
-
+        assertEquals("Unexpected status code: " + actualStatusCode, actualStatusCode, expectedStatusCode);
         connection.disconnect();
         driver.quit();
     }
-
 }

@@ -4,10 +4,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-
 import org.openqa.selenium.support.ui.Select;
-
 
 public class HomePage extends BasePage {
 
@@ -83,6 +80,7 @@ public class HomePage extends BasePage {
         return Integer.parseInt(shoppingCartLink.getText());
 
     }
+
     public void clickOnShoppingCartIcon() {
         wait(shoppingCartLink).click();
     }

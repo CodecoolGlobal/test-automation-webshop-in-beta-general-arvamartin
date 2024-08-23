@@ -1,10 +1,12 @@
 package StepDefinitions;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.LoginPage;
+
 import java.net.MalformedURLException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,13 +20,13 @@ public class LoginStep {
 
     @Given("user is using {string} browser")
     public void userIsUsing(String browser) throws MalformedURLException {
-       BaseTest.setUpDriver(browser);
-       driver = BaseTest.getDriver();
-       loginPage = new LoginPage(driver);
+        BaseTest.setUpDriver(browser);
+        driver = BaseTest.getDriver();
+        loginPage = new LoginPage(driver);
     }
 
     @Given("user is on the {string} page")
-    public void userIsOnThePage(String basePageUrl){
+    public void userIsOnThePage(String basePageUrl) {
         driver.get(basePageUrl);
         driver.manage().window().maximize();
     }

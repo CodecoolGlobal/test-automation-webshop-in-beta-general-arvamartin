@@ -19,7 +19,7 @@ public abstract class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    protected WebElement wait(WebElement webElement){
+    protected WebElement wait(WebElement webElement) {
         wait.until(ExpectedConditions.elementToBeClickable(webElement));
         wait.until(ExpectedConditions.visibilityOf(webElement));
         return webElement;

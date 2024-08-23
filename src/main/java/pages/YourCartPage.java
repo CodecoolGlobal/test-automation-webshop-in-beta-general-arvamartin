@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class YourCartPage extends BasePage {
 
-
     @FindBy(id = "checkout")
     private WebElement checkoutBtn;
     @FindBy(id = "first-name")
@@ -41,13 +40,16 @@ public class YourCartPage extends BasePage {
     public void enterPostalCode(String postalCode) {
         postalCodeField.sendKeys(postalCode);
     }
+
     public void clickContinueBtn() {
         continueBtn.click();
     }
+
     public void clickFinishBtn() {
         finishBtn.click();
     }
-    public String getCompleteMessage(){
+
+    public String getCompleteMessage() {
         return wait(completeMessage).getText();
     }
 }

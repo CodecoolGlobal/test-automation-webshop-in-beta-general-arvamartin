@@ -1,4 +1,5 @@
 package StepDefinitions;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
@@ -33,7 +34,6 @@ public class CheckOutStep {
         yourCartPage.enterLastName(lastName);
     }
 
-
     @When("user enters {string} as postal code")
     public void userEntersAsPostalCode(String postalCode) {
         yourCartPage.enterPostalCode(postalCode);
@@ -51,6 +51,6 @@ public class CheckOutStep {
 
     @Then("user get {string} message")
     public void userGetMessage(String message) {
-    assertEquals(message, yourCartPage.getCompleteMessage());
+        assertEquals(message, yourCartPage.getCompleteMessage());
     }
 }
