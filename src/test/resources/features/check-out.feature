@@ -64,3 +64,20 @@ Feature: check-out
       | edge    |
       | chrome  |
       | firefox |
+
+  Scenario Outline: Unsuccessful check out with empty cart
+    Given user is using "<browser>" browser
+    And user is on the "https://www.saucedemo.com/" page
+    And user enters "standard_user" username
+    And user enters "secret_sauce" password
+    And user clicks on the login button
+    And user clicks on add to cart button for a product
+    And user clicks on add to cart button for another product
+    When user clicks on the shopping cart icon
+    And user clicks on the checkout button
+    Then user got error message
+    Examples:
+      | browser |
+      | edge    |
+      | chrome  |
+      | firefox |

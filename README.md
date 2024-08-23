@@ -57,6 +57,9 @@ docker compose -f docker-compose-v3.yml down
   - **Form Validation Bypass on Checkout Page**
     - Description: When attempting to proceed with checkout on the webshop, users are required to fill out a form with their first name, last name, and postal code. However, the system allows users to proceed to the next step even if invalid information is entered into these fields.
     - In addition, the form does not require additional information (e.g. billing address, residential address or delivery address...etc) 
+  - **Checkout Process Bypass Without Adding Products**
+    - Description: When attempting to proceed with checkout on the webshop, users are typically required to add products to their cart first. 
+      However, the system currently allows users to skip this step and proceed directly to the checkout page without adding any items to their cart.
   - **Registration Functionality Not Available**
     - Description: Users are unable to register an account on the webshop, as the registration option is not available or visible on the website. This prevents new users from creating accounts and accessing features that require registration.
 * These issues are listed in the project's task board in the "TO DO" column and are awaiting resolution.

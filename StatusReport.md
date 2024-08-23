@@ -9,8 +9,7 @@ Prepared By: CodeCrackers
 
 ## Achievements/Completed Work:
 
-* Executed 14 test cases across Firefox, Chrome, and Edge, with all tests passing except for the Checkout issue.
-* No other bugs were found during testing.
+* Executed 18 test cases across Firefox, Chrome, and Edge, with all tests passing except for the Checkout issues.
 * Verified cross-browser compatibility and stability.
 
 ## In Progress:
@@ -28,6 +27,7 @@ Gathering requirements and planning for the development of the registration feat
 ## Issues and Risks:
 
 * Issue: Checkout form accepts incorrect data, allowing users to complete transactions with invalid information.
+  And system currently allows users to proceed directly to the checkout page without adding any items to their cart.
 * Action: Immediate attention required to fix the validation and data processing in the Checkout feature.
 * Risk: The absence of a registration feature and the Checkout bug may delay the go-live date.
 * Action: Prioritize fixing the Checkout issue and developing the registration page to ensure the product can be launched on schedule.
