@@ -5,7 +5,7 @@ Report Date: August 22, 2024
 Prepared By: CodeCrackers
 
 ## Summary:
-* The Webshop project is currently in the Beta stage and is progressing well. All 14 test cases have been successfully executed across Firefox, Chrome, and Edge. However, a critical bug has been identified in the Checkout feature, where the form accepts and processes incorrect data, allowing users to complete the checkout process with invalid information. The overall state of the application is stable except for this issue. The lack of a registration feature is still a gap that needs addressing before the product can go live.
+* The Webshop project is currently in the Beta stage and is progressing well. We have 16 test cases and 3 of them failed in the checkout feature. You can read more about this in the readme file. The testes are executed across Firefox, Chrome, and Edge. However, a critical bug has been identified in the Checkout feature, where the form accepts and processes incorrect data, allowing users to complete the checkout process with invalid information. The overall state of the application is stable except for this issue. The lack of a registration feature is still a gap that needs addressing before the product can go live.
 
 ## Achievements/Completed Work:
 
