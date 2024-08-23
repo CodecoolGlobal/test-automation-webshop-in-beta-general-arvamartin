@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import io.cucumber.java.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -32,5 +33,10 @@ public class BaseTest {
 
     public static WebDriver getDriver() {
         return driver;
+    }
+
+    @After
+    public void tearDown() {
+        driver.quit();
     }
 }
