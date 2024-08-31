@@ -1,5 +1,10 @@
 # Webshop in Beta (Selenium Grid Project)
-<img src="img.png" alt="img.png" width="700"/>;
+
+# System Under Test (SUT)
+<img src="img.png" alt="sut.png" width="700"/>;
+
+# Test results
+<img src="img_2.png" alt="test_result.png" width="700"/>;
 ## Overview
 This project leverages Selenium Grid to perform automated UI testing on a webshop application (https://www.saucedemo.com/), using various browsers. 
 The testing framework is set up using Selenium, Cucumber for behavior-driven development (BDD), and Maven for project management.
@@ -49,8 +54,9 @@ docker compose -f docker-compose-v3.yml up
 docker compose -f docker-compose-v3.yml down
 ```
 * The tests can be run with `AllTestRunner` class or separately from the `.feature` files.
-* The results of the tests can be checked in detail on Selenium grid website: [http://localhost:4444/](http://localhost:4444/).
+* The execution of the tests can be monitored in real-time on the Selenium Grid website. [http://localhost:4444/](http://localhost:4444/).
 <img src="img_1.png" alt="img_1.png" width="700"/>;
+
 
 ## Bug report
 For detailed information about the bugs founded: [bug-report.md](bug-report.md)
