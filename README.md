@@ -40,9 +40,9 @@ The testing framework is set up using Selenium, Cucumber for behavior-driven dev
 
 ## Setup Instructions
 ### Prerequisites
-* Java JDK 21
-* Maven
-* Docker (for running Selenium Grid)
+* [Java JDK 21](https://www.oracle.com/java/technologies/downloads/#java21)
+* [Maven](https://maven.apache.org/download.cgi)
+* [Docker (for running Selenium Grid)](https://www.docker.com/products/docker-desktop/)
 
 ### Running Selenium Grid with Docker
 **Run the following command to start Selenium Grid:**
